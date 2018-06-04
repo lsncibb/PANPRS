@@ -1,0 +1,4 @@
+useDynLib(SummaryLasso)
+export(gsfPEN,gsPEN,Tuning_summarystat,PlinkLD_transform,Tuning_setup_group_only, Tuning_setup_group_func)
+
+
