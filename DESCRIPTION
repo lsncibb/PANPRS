@@ -2,12 +2,12 @@ Package: SummaryLasso
 Type: Package
 Title: Building polygenic risk prediction models based on summary
         statistics of genome-wide association studies
-Version: 1.5
+Version: 1.6
 Date: 2018-06-04
 Author: Ting-Huei Chen
 Maintainer: Ting-Huei Chen <tingstat22@gmail.com>
 Depends: R, gtools, permutations
 Description: Shrinkage estimator for polygenic risk prediction models based on summary statistics of genome-wide association studies.
 License: GPL version 2 or later
-Packaged: 2018-06-04 13:37:51 UTC; tingchen
+Packaged: 2018-07-17 19:00:04 UTC; chen
 NeedsCompilation: yes

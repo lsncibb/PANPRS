@@ -20,7 +20,7 @@
    \item R: The correlation between SNP_A and SNP_B
  }}
 \usage{data(plinkLD)}
-\format{A data frame with 5 rows and 7 columns}
+\format{A data frame with 205959 rows and 7 columns}
 \references{
   \itemize{
     \item Purcell S, et al. (2007) 

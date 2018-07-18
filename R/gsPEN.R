@@ -148,7 +148,11 @@
   colnames(BetaMatrix) = paste0(rep(SNPnames, times = Q),".trait", rep(c(1:Q), each = P))
    
   Numitervec = Z$Numitervec
-   
+  output = Cleaning(BetaMatrix=BetaMatrix, Numitervec=Numitervec, AllTuningMatrix=tuningMatrix)
+  Numitervec = output[[1]]
+  BetaMatrix = output[[2]]
+  tuningMatrix = output[[3]]
+  rm(output)
   if(outputAll==0){
     convergeIndex = which(Numitervec > 0)
     Numitervec = Numitervec[convergeIndex]

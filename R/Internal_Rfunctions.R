@@ -64,4 +64,27 @@ Tuning_setup_group_func = function(lambdavec_func, lambdavec_func_limit_len, p.T
   return(output)
 }
 
+nonzero = function(xx){
+  return(length(which(xx!=0)))
+}
+
+Cleaning = function(BetaMatrix, Numitervec, AllTuningMatrix){
+   tuningvec = apply(AllTuningMatrix,1,paste0,collapse=":")
+   uniqvec = unique(tuningvec)
+   mat = match(uniqvec,tuningvec)
+   Numitervec = Numitervec[mat]
+   BetaMatrix = BetaMatrix[mat,]
+   AllTuningMatrix = AllTuningMatrix[mat,]
+   NumCounts = apply(BetaMatrix,1,nonzero)
+   od = order(NumCounts)
+   Numitervec = Numitervec[od]
+   BetaMatrix = BetaMatrix[od,]
+   AllTuningMatrix = AllTuningMatrix[od,]
+   output = list()
+   output[[1]] = Numitervec
+   output[[2]] = BetaMatrix
+   output[[3]] = AllTuningMatrix
+   return(output)
+}
+
 

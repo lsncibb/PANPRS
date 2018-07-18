@@ -191,6 +191,11 @@
   
   colnames(AllTuningMatrix) = c("lam0",paste0("lam.f",c(1:numfunc)),"lam2","tau")
   
+  output = Cleaning(BetaMatrix=BetaMatrix, Numitervec=Numitervec, AllTuningMatrix=AllTuningMatrix)
+  Numitervec = output[[1]]
+  BetaMatrix = output[[2]]
+  AllTuningMatrix = output[[3]]
+  rm(output)
   if(outputAll==0){
     convergeIndex = which(Numitervec > 0)
     Numitervec = Numitervec[convergeIndex]
