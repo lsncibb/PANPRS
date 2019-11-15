@@ -1,9 +1,9 @@
-# SummaryLasso
+# PANPRS
 
 
 
 
-### Input for SummaryLasso incorporating multiple traits and functional annotations of SNPs.
+### Input for PANPRS incorporating multiple traits and functional annotations of SNPs.
 
 summaryZ, 
 The Z statistics of p SNPs from q GWA studies. A matrix with dimension p x q for p SNPs and q traits. The first column corresponds to the primary trait and the rest columns correspond to the secondary traits.
